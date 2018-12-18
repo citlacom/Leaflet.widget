@@ -127,7 +127,7 @@ L.LayerGroup.include({
 L.Control.Select = L.Control.extend({
     options: {
         title: 'Remove selected features',
-        position: 'bottomright',
+        position: 'topright',
         remove: true
     },
 

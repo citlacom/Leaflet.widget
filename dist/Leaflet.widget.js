@@ -331,7 +331,7 @@ L.LayerGroup.include({
 L.Control.Select = L.Control.extend({
     options: {
         title: 'Remove selected features',
-        position: 'bottomright',
+        position: 'topright',
         remove: true
     },
 
@@ -461,8 +461,9 @@ L.Handler.Widget = L.Handler.extend({
     _initDraw: function () {
         this._map.drawControl = new L.Control.Draw({
             position: 'topright',
-            polyline: { shapeOptions: this.options.drawVectorStyle },
-            polygon: { shapeOptions: this.options.drawVectorStyle },
+            polyline: false,
+            polygon: false,
+            simpleshape: false,
             circle: false,
             rectangle: false
         }).addTo(this._map);
