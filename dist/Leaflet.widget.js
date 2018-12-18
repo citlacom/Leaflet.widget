@@ -1,5 +1,5 @@
-/*! Leaflet.widget - v0.1.0 - 2012-11-02
-* Copyright (c) 2012 Affinity Bridge - Tom Nightingale <tom@affinitybridge.com> (http://affinitybridge.com)
+/*! Leaflet.widget - v0.1.0 - 2018-12-18
+* Copyright (c) 2018 Affinity Bridge - Tom Nightingale <tom@affinitybridge.com> (http://affinitybridge.com)
 * Licensed BSD */
 
 L.GeoJSONUtil = {
