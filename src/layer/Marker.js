@@ -1,3 +1,7 @@
+L.Marker.mergeOptions({
+    draggable: true
+});
+
 L.Marker.include({
     toGeometry: function () {
         return {
