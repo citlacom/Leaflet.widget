@@ -1,4 +1,4 @@
-/*! Leaflet.widget - v0.1.0 - 2018-12-18
+/*! Leaflet.widget - v0.1.0 - 2018-12-20
 * Copyright (c) 2018 Affinity Bridge - Tom Nightingale <tom@affinitybridge.com> (http://affinitybridge.com)
 * Licensed BSD */
 
@@ -133,6 +133,10 @@ L.FeatureGroup.include({
             return L.GeoJSONUtil.feature(this.toGeometry());
         }
     }
+});
+
+L.Marker.mergeOptions({
+    draggable: true
 });
 
 L.Marker.include({
