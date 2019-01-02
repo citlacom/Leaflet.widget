@@ -132,7 +132,7 @@ L.LayerGroup.include({
 
 L.Control.Select = L.Control.extend({
     options: {
-        title: 'Remove selected items',
+        title: 'Delete items',
         position: 'topright',
         remove: true
     },
