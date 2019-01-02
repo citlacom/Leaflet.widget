@@ -132,7 +132,7 @@ L.LayerGroup.include({
 
 L.Control.Select = L.Control.extend({
     options: {
-        title: 'Remove selected features',
+        title: 'Remove selected items',
         position: 'topright',
         remove: true
     },
@@ -145,7 +145,7 @@ L.Control.Select = L.Control.extend({
 
         if (this.options.remove) {
             this._createButton(
-                    this.options.remove.title,
+                    this.options.title,
                     class_name + '-remove',
                     container,
                     this._delete,
