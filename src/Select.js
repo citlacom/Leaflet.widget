@@ -80,25 +80,31 @@ L.Handler.Select = L.Handler.extend({
 
     select: function (e) {
         var layer = e.layer || e.target || e;
-        layer.off('click', this.select);
-        layer.on('click', this.deselect, this);
-        this._selected.addLayer(layer);
-        this._map.fire('selected', { layer: layer });
+        if (this._selected) {
+            layer.off('click', this.select);
+            layer.on('click', this.deselect, this);
+            this._selected.addLayer(layer);
+            this._map.fire('selected', { layer: layer });
+        }
     },
 
     deselect: function (e, permanent) {
         var layer = e.layer || e.target || e;
-        layer.off('click', this.deselect);
-        this._selected.removeLayer(layer);
-        this._map.fire('deselected', { layer: layer });
+        if (this._selected) {
+            layer.off('click', this.deselect);
+            this._selected.removeLayer(layer);
+            this._map.fire('deselected', { layer: layer });
 
-        if (!permanent) {
-            layer.on('click', this.select, this);
+            if (!permanent) {
+                layer.on('click', this.select, this);
+            }
         }
     },
 
     applyToSelected: function (callback, context) {
-        this._selected.eachLayer(callback, context);
+        if (this._selected) {
+            this._selected.eachLayer(callback, context);
+        }
     },
 
     _bind: function (e) {
